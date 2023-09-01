@@ -1,14 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Login.scss';
+import React from "react";
+import "./Login.css";
 
-const Login = () => {
-    return (
-        <div className="login">
-            <section className="flexCenter">이곳은 로그인 화면입니다.</section>
-            <Link to="/">메인 화면으로 이동하기</Link>
-        </div>
-    );
+function Login() {
+
+  return (
+    <div>
+      <section className="images">
+          <img src="img/Logo.png" alt="logo" />
+          <img src="img/logo_wecode.png" alt="text_logo" />
+      </section>
+
+      <section className="infomation">
+           <span className="email">이메일</span>
+           <span className="password">비밀번호</span>
+           <span className="login">로그인</span>
+      </section>
+    </div>
+  )
 };
 
 export default Login;
