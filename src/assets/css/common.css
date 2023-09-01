@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: Apple SD Gothic Neo;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+}
+
+select {
+  appearance: none;
+}
+
+.hidden {
+  position: absolute;
+  z-index: -1;
+  font-size: 1px;
+  color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 22px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #2D71F7;
+  color: #fff;
+}
+
+.form input {
+  width: 100%;
+}
+
+.form h1 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.form .input-wrapper{
+  margin-top: 24px;
+}
+
+.form .input-wrap {
+  position: relative;
+}
+
+.form .input-wrap + .input-wrap {
+  margin-top: 8px;
+}
+
+.form .input-wrap .required,
+.form .input-wrap .optional {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  font-size: 12px;
+}
+
+.form .input-wrap .required {
+  color: #FF3636;
+}
+
+.form .input-wrap .optional {
+  color: #999;
+}
+
+.form .input-wrap label + input,
+.form .input-wrap .input-flex {
+  margin-top: 8px;
+}
+
+.form .input-style {
+  padding: 19px 16px 15px;
+  border: 1px #e0e0e0 solid;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #999;
+}
+
+.form select.input-style {
+  padding-right: 48px;
+  background-image: url("../../assets/images/join/Select_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 14px top 16px;
+}
+
+.form select.input-style + select.input-style {
+  margin-left: 8px;
+}
+
+.form select.input-style:nth-child(1) {
+  width: 24%;
+  min-width: 110px;
+}
+
+.form select.input-style:nth-child(2) {
+  width: 33%;
+}
+
+.form .input-flex {
+  display: flex;
+}
+
+.form .input-flex label {
+  flex: 1;
+}
+
+.form .input-flex .input-style + label {
+  margin-left: 8px;
+}
+
+.form .input-wrapper + .btn {
+  margin-top: 70px;
+}
+
+.form .input-wrap + .btn {
+  margin-top: 16px;
+}
+
+.form + .option-list {
+  margin-top: 16px;
+}
+
+.option-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.option-list li {
+  position: relative;
+}
+
+.option-list li:first-child {
+  padding-right: 24px;
+}
+
+.option-list li:last-child {
+  padding-left: 24px;
+}
+
+.option-list li:first-child::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #E0E0E0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.option-list li a {
+  display: inline-block;
+  min-width: 96px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+}

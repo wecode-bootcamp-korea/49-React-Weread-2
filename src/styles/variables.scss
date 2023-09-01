@@ -1,2 +1,7 @@
 $primary-color: #1351f9;
-$secondary-color: #27ae60;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
