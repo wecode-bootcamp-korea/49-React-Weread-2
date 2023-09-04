@@ -7,9 +7,17 @@ import wecodeLogo from "../../assets/images/login/logo_wecode.png";
 
 const Login = () => {
   const navigate = useNavigate();
-
-  const goToMain =()=> {
+  const goToMain = ( )=> {
     navigate('/main');
+  }
+
+  const saveUserId = (event) => {
+    let state = event.target.value;
+
+  }
+
+  const saveUserPw = (event) => {
+    let state = event.target.value;
   }
 
   return (
@@ -30,12 +38,16 @@ const Login = () => {
             <legend className="hidden">로그인 양식</legend>
             <div className="input-wrap">
               <label>
-                <input type="text" placeholder="이메일" className="input-style" />
+                <input type="text" placeholder="이메일" className="input-style"
+                  onChange={saveUserId}
+                />
               </label>
             </div>
             <div className="input-wrap">
               <label>
-                <input type="password" placeholder="비밀번호" className="input-style" />
+                <input type="password" placeholder="비밀번호" className="input-style"
+                  onChange={saveUserPw}
+                />
               </label>
             </div>
             <Link to="/main" className="btn btn-primary">로그인</Link>
