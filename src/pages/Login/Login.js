@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.scss";
 import mainLogo from "../../assets/img/Logo.png";
 import { Link, useNavigate } from 'react-router-dom';
 
+const Button = (onClick) => {
+  return (
+    <button className="buttonFill" onClick={onClick}>
+      <span>로그인</span>
+    </button>
+  )
+}
+
 const Login = () => {
 
   const Navigate = useNavigate();
+  const [saveUserId, setSaveUserId] = useState("");
+  const [saveUserPassword, setSaveUserPassword] = useState("");
 
   const LoginBtn = () => {
     Navigate('/Main');
   }
+
+  const SaveUserId = (e) => {
+    setSaveUserId(e.currentTarget.value);
+  }
+
+  const SaveUserPassword = (e) => {
+    setSaveUserPassword(e.currentTarget.value);
+  }
+
+  console.log(saveUserId.includes('@') && saveUserPassword.length > 5 )
 
   return (
     <div className="login">
@@ -23,11 +43,12 @@ const Login = () => {
       <div className="loginContainer">
 
         <div class="input">
-          <input className="textInput_lv1" type="text" placeholder="이메일" />
-          <input className="textInput_lv1" type="password" placeholder="비밀번호" />
+          <input className="textInput_lv1" type="text" placeholder="이메일" value={saveUserId} onChange={SaveUserId}/>
+          <input className="textInput_lv1" type="password" placeholder="비밀번호" value={saveUserPassword} onChange={SaveUserPassword}/>
         </div>
 
-        <button className="buttonFill" onClick={LoginBtn}>
+        <button className="buttonFill" 
+            onClick={LoginBtn} >
           <span>로그인</span>
         </button>
 
@@ -37,6 +58,8 @@ const Login = () => {
           <Link to='/'>비밀번호 찾기</Link>
         </div>
         
+        {/* disabled={ () => { return saveUserId.indexOf('@') === -1 ? false : true } } */}
+        {/* { saveUserId.indexOf('@') === -1 ? setColor('#ff0000') : setColor('#2d71f7') } */}
       </div>
     </div>
   );
