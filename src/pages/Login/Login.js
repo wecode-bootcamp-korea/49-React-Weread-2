@@ -48,7 +48,9 @@ const Login = () => {
         </div>
 
         <button className="buttonFill" 
-            onClick={LoginBtn} >
+            onClick={LoginBtn} 
+            style={{background : saveUserId.includes('@') && saveUserPassword.length >= 5 ? '#2d71f7' : 'Gray'}}
+            disabled={saveUserId.includes('@') && saveUserPassword.length >= 5 ? false : true}>
           <span>로그인</span>
         </button>
 
