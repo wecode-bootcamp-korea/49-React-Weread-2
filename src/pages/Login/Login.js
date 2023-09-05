@@ -1,6 +1,5 @@
-import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import "../../assets/css/common.css";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Login.scss";
 import logo from "../../assets/images/login/Logo.png";
 import wecodeLogo from "../../assets/images/login/logo_wecode.png";
@@ -11,15 +10,19 @@ const Login = () => {
     navigate('/main');
   }
 
-  const saveUserId = (event) => {
-    let state = event.target.value;
+  const [userId, setUserId] = useState("");
+  const [userPw, setUserPw] = useState("");
 
+  const saveUserId = (e) => {
+    setUserId(e.target.value);
   }
 
-  const saveUserPw = (event) => {
-    let state = event.target.value;
+  const saveUserPw = (e) => {
+    setUserPw(e.target.value);
   }
 
+  const isBtnValidate = (userId.includes('@') && userPw.length > 4);
+  
   return (
     <div className="login">
       <header className="login-header">
@@ -50,8 +53,7 @@ const Login = () => {
                 />
               </label>
             </div>
-            <Link to="/main" className="btn btn-primary">로그인</Link>
-            <button type="button" className="btn btn-primary" onClick={goToMain}>로그인</button>
+            <button type="button" className="btn btn-primary" onClick={goToMain} disabled={isBtnValidate ? false : true}>로그인</button>
           </fieldset>
         </form>
         <ul className="option-list">

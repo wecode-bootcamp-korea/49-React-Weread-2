@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import "../../assets/css/common.css";
 import "./Main.scss";
 
 const Main = () => {
@@ -82,7 +81,7 @@ const Main = () => {
             </div>
           </div>
 
-          <button type="sumbit" className="btn btn-primary">회원 가입</button>
+          <button type="submit" className="btn btn-primary">회원 가입</button>
         </form>
       </main>
     </div>
