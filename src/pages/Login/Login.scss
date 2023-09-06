@@ -6,7 +6,7 @@
 .login {
   width: 100%;
   height: 100vh;
-}
+
 .imgBox{
   width: 100%;
   height: 555px;
@@ -100,9 +100,13 @@
   font-size: 14px;
   border: 1px solid white; 
   background-color: white;
+  color: black;
+  text-decoration-line:none;
 }
 .passFind{
   font-size: 14px;
   border: 1px solid white; 
   background-color: white
+}
+
 }
