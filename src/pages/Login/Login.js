@@ -1,41 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../assets/images/Logo.png";
 import name from "../../assets/images/logo_wecode.png";
+import { Link, useNavigate }  from 'react-router-dom'
+
 
 const Login = () => {
+
+  const navigate = useNavigate();
+  const goToMain = () => {navigate("/main")}
+
+  const [userId, setUserId] = useState("");
+  const [userPw, setUserPw] = useState("");
+  
+  const saveUserId = (event) =>{setUserId(event.target.value)};
+  const saveUserPw = (event) =>{setUserPw(event.target.value)};
+
+  const activeButton = userId.includes('@') && userPw.length >= 5;
+  console.log(userId.includes('@'));
+
   return (
     <div className="login">
-      <div>로그인페이지</div>
-        <body>
-
-          <div class="login_logo">
-            <img src={logo} alt="wecodeLogo" class="logo1" />
-            <img src={name} alt="nameLogo" class="logo2" />
-          </div>
+        <form>
+          <fieldset>
+            <header className="login_logo">
+              <img src={logo} alt="wecodeLogo" />
+              <img src={name} alt="nameLogo" />
+            </header>
           
-          <div class="login_form">
+            <section className="login_form">
+              <input type="text" placeholder="이메일" className="mail" onChange={saveUserId} required/>
+              <input type="password" placeholder="비밀번호" className="password" onChange={saveUserPw} required/>
+              <button 
+                      type="button" 
+                      onClick={goToMain} 
+                      style={{ backgroundColor: activeButton ? "" : "gray" }} 
+                      disabled = {!activeButton}>  
+                <span>로그인</span>
+              </button>
+            </section>          
 
-            <div class="login_data">
-              <input id="id" type="text" placeholder="이메일" /><br />
-              <input id="password" type="password" placeholder="비밀번호" />
-            </div>
+            <ul className="search">
+              <li><Link to="/main">회원가입</Link></li>
+              <li> 비밀번호 찾기</li>
+            </ul>
+          </fieldset>
 
-            <button id="button" type="button"> 
-              <span>로그인</span>
-            </button>
-
-            <div class="search">
-              <a class="join" href=""> 회원가입</a>
-            
-              <div></div>
-            
-              <a class="pw" href=""> 비밀번호 찾기</a>
-            </div>
-
-          </div>
-          
-        </body>
+        </form>
     </div>
   );
 };

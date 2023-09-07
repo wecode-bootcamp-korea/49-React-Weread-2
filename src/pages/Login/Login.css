@@ -1,86 +1,83 @@
 .login {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form{
+  width: 576px;
+  height: 844px;
+  margin: auto;
+}
+
+fieldset {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: none;
+  font-family: Apple SD Gothic Neo;
 }
 
-.login_logo{
-  width: 576px;
+  .login_logo{
   height: 555px;
   gap: 24px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  }
 
-.logo1{
-  width: 118px;
-  height: 143px;
-}
+  .logo1{
+    width: 118px;
+    height: 143px;
+  }
 
-.logo2{
-  width: 144px;
-  height: 32px;
-}
+  .logo2{
+    width: 144px;
+    height: 32px;
+  }
 
-.login_form{
-  display: flex;
-  width: 576px;
-  height: 225px;
-  /*padding: 0px 24px 0px 24px;*/
-  gap: 16px;
-  border: 1px solid black;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  .login_form{
+    padding: 0px 24px 0px 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: inline-block;
+  }
 
-.login_data{
-  width: 528px;
-  height: 120px;
-  gap: 8px;
-}
+  input{
+    width: 100%;
+    height: 56px;
+    margin: 4px 0px 4px 0px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    ;
+  }
 
-input{
-width: 528px;
-height: 56px;
-border-radius: 6px;
-border: 1px solid #E0E0E0;
-}
+  button{
+    width: 528px;
+    height: 56px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 6px;
+    background: #2D71F7;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+   }
 
-button{
-width: 528px;
-height: 56px;
-border-radius: 6px;
-background: #2D71F7;
-}
+ .search{
+   display: flex;
+   font-size: 14px;
+   align-items: center;
+   justify-content: center;
+   list-style: none;
+   
+  }
+   
+  li:first-child{
+   padding-right: 24px;
+   border-right: 1px solid #e0e0e0;
+  }
 
-
-.search{
-width: 240px;
-height: 17px;
-gap: 24px;
-display: flex;
-border: 1px solid black;
-font-family: Apple SD Gothic Neo;
-font-size: 14px;
-font-weight: 400;
-line-height: 17px;
-letter-spacing: 0px;
-text-align: center;
-
-}
-
-.join{
-  width: 96px;
-  height: 17px;
-}
-
-.search_pw{
-  width: 96px;
-  height: 17px;
-}
+  li:last-child{
+    padding-left: 24px;
+  }
