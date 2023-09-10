@@ -1,5 +1,140 @@
-@import '../../styles/variables.scss';
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
 
 .login {
-    background-color: $primary-color;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-bottom : 40px;
+  flex-direction : column;
+  align-items: flex-start;
+  gap : 24px;
+  border-radius : 16px;
+  border : 1px solid #E5E5E5;
+  background-color: #FFFFFF;
+}
+
+.loginSplash{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 24px;
+  flex : 1 0 0;
+  align-self : stretch;
+}
+
+.logo{
+  width: 118px;
+  height: 142.997px;
+}
+
+.logo_wecode{
+  width: 144px;
+  height: 32px;
+}
+
+.loginContainer {
+  display : flex;
+  padding : 0px 24px;
+  flex-direction : column;
+  align-items : center;
+  gap : 16px;
+  align-self : stretch;
+}
+
+.input{
+  display : flex;
+  flex-direction : column;
+  justify-content: flex-end;
+  align-items : center;
+  gap : 8px;
+  align-self : stretch;
+}
+
+.textInput_lv1{
+  display : flex;
+  height : 56px;
+  align-items: center;
+  align-self : stretch;
+  border-radius: 6px;
+  border : 1px solid #E0E0E0;
+  background-color: #fff;
+  padding : 19px 16px 15px 16px;
+}
+
+input::-webkit-input-placeholder {
+  color : #999;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Apple SD Gothic Neo;
+  /* padding : 19px 470px 15px 16px; */
+  font-size : 16px;
+  font-weight : 400;
+  line-height : 22px;
+}
+
+.buttonFill{
+  display : flex;
+  height : 56px;
+  justify-content: center;
+  align-items: center;
+  align-self : stretch;
+  border-radius: 6px;
+  background : #2d71f7;
+  border : none;
+
+  span{
+    color : #fff;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Apple SD Gothic Neo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+}
+
+.loginOption{
+  display : flex;
+  width : 240px;
+  justify-content: center;
+  align-items: center;
+  gap : 24px;
+
+  a{
+    width : 95px;
+    flex-shrink: 0;
+    color : #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Apple SD Gothic Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: none;
+  }
+
+  span{
+    width : 95px;
+    flex-shrink: 0;
+    color : #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Apple SD Gothic Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  div{
+    width : 1px;
+    height : 16px;
+    background : #E0E0E0;
+  }
 }
